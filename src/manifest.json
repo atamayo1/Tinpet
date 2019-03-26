@@ -1,0 +1,16 @@
+{
+    "dir":"ltr",
+    "lang":"es",
+    "name":"Tinpet",
+    "scope":"/",
+    "display":"fullscreen",
+    "start_url":"http://localhost:8080/",
+    "short_name":"Tinpet",
+    "theme_color":"transparent",
+    "description":"Una app para que las mascotas encuentren pareja",
+    "orientation":"any",
+    "background_color":"transparent",
+    "related_applications":[],
+    "prefer_related_applications":false
+
+}

@@ -1,0 +1,52 @@
+<!-- 
+  - @author    Ionic Bucket <ionicbucket@gmail.com>
+  - @copyright Copyright (c) 2018
+  - @license   Fulcrumy
+-->
+<!-- Landing Page -->
+
+<ion-content id="landing-page">
+  <div class="background" text-center>
+    <div class="logo-contents animated fadeInDown">
+
+      <!-- Slider Cntent  -->
+      <ion-slides pager autoplay="5000" loop="true">
+        <ion-slide>
+          <ion-icon name="chatbubbles" style="zoom:4.0;" color="color3"></ion-icon>
+          <p class="heading">Chat With Strangers</p>
+          <p class="subheading" padding>Meet with new people and make new friends instantly</p>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-icon name="people" style="zoom:4.0;" color="color3"></ion-icon>
+          <p class="heading">Talk With Everyone</p>
+          <p class="subheading" padding>Talk to Strangers all over the world</p>
+        </ion-slide>
+
+        <ion-slide>
+          <ion-icon name="happy" style="zoom:4.0;" color="color3"></ion-icon>
+          <p class="heading">Discuss any topic</p>
+          <p class="subheading" padding>Discuss any topic with anybody you want</p>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <!-- Buttons  -->
+    <ion-row>
+
+      <!-- Sign Up Button  -->
+      <ion-col>
+        <div class="button-option animated fadeInUp" padding>
+          <button class="custom-btn" ion-button padding round full color="color3" (click)="goToSignUpPage()">SIGN UP</button>
+        </div>
+      </ion-col>
+
+      <!-- Sign In Button  -->
+      <ion-col>
+        <div class="button-option animated fadeInUp" padding>
+          <button class="custom-btn" ion-button padding round full color="color3" (click)="goToSignInPage()">SIGN IN</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

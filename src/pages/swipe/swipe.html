@@ -1,0 +1,78 @@
+<!-- 
+  - @author    Ionic Bucket <ionicbucket@gmail.com>
+  - @copyright Copyright (c) 2018
+  - @license   Fulcrumy
+-->
+<!-- Swipe Page -->
+
+<ion-content>
+
+  <!-- Loding Spinner  -->
+  <div class="loading" *ngIf="users.length == 0">
+    <div class="spinner">
+      <div class="double-bounce1"></div>
+      <div class="double-bounce2"></div>
+      <img src="assets/imgs/1.jpg">
+      <div class="label">Finding people near you...</div>
+    </div>
+  </div>
+
+  <!-- Swipe Card  -->
+  <!-- This card is apply from - https://github.com/ksachdeva/angular2-swing  -->
+  <!-- Every single user will be shown in this card -->
+  <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="like(false)" (throwoutright)="like(true)" (throwoutdown)="like(false)"
+    (throwoutup)="like(true)" id="card-stack" *ngIf="users.length > 0">
+    <ion-card #mycards1 swing-card *ngFor="let user of users">
+      <img *ngIf="user.Images[0]" [src]="user.Images[0]">
+      <div class="overlay" (tap)="goToUserDetailsPage(user)">
+        <div class="card-title">
+          <p class="name">
+            {{ user.Name }}
+          </p>
+          <p class="job-title">
+            {{user.JobTitle}}
+          </p>
+        </div>
+      </div>
+    </ion-card>
+  </div>
+
+  <!-- Bottom Buttons  -->
+  <div class="buttons" *ngIf="users.length > 0">
+
+    <!-- Refresh Button  -->
+    <div class="button-container">
+      <button ion-button icon-only round class="refresh" (click)="refresh()">
+        <ion-icon color="color7" name="refresh"></ion-icon>
+      </button>
+    </div>
+
+    <!-- Dis-Like Button  -->
+    <div class="button-container">
+      <button ion-button icon-only round class="dislike" (click)="like(false)" id="dislike-button">
+        <ion-icon color="color3" name="md-close"></ion-icon>
+      </button>
+    </div>
+
+    <!-- Super Like Button  -->
+    <div class="button-container">
+      <button ion-button icon-only round class="super-like" (click)="like(true)" id="super-like-button">
+        <ion-icon color="color4" name="star"></ion-icon>
+      </button>
+    </div>
+
+    <!-- Like Button  -->
+    <div class="button-container">
+      <button ion-button icon-only round class="like" (click)="like(true)" id="like-button">
+        <ion-icon color="color5"name="heart"></ion-icon>
+      </button>
+    </div>
+
+    <!-- Flash Button  -->
+    <div class="button-container">
+      <button ion-button icon-only round class="refresh">
+        <ion-icon color="color6" name="flash"></ion-icon>
+      </button>
+    </div>
+  </div>
+</ion-content>

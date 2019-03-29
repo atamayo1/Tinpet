@@ -1,21 +1,52 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { AdMobFree } from '@ionic-native/admob-free';
+import { Camera } from '@ionic-native/camera';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { MyApp } from './app.component';
+import { HttpModule } from '@angular/http';
+import { SwingModule } from 'angular2-swing';
+import { DataProvider } from '../providers/data/data';
+import { GiphyProvider } from '../providers/giphy/giphy';
+
+import { UserProfilePopover } from '../pages/user-details/user-details';
+import { ChatProvider } from '../providers/chat/chat';
+import { AdmobProvider } from '../providers/admob/admob';
 
 @NgModule({
   declarations: [
-    AppComponent
+    MyApp,
+    UserProfilePopover
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    IonicModule.forRoot(MyApp),
+    HttpModule,
+    SwingModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    UserProfilePopover
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    HttpClient,
+    Camera,
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AdMobFree,
+    DataProvider,
+    GiphyProvider,
+    ChatProvider,
+    AdmobProvider
+  ]
 })
 export class AppModule { }

@@ -1,0 +1,41 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-admob-free": {
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-admob-sdk": {
+      "PLAY_SERVICES_VERSION": "11.0.4",
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    },
+    "cordova-promise-polyfill": {
+      "PACKAGE_NAME": "com.ionicbucket.lovedating"
+    }
+  }
+}

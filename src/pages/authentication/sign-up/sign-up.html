@@ -15,7 +15,7 @@
     <ion-slide>
       <div class="main-body">
         <div class="section-one">
-          <div class="field-title">Hey! You're ...</div>
+          <div class="field-title">¡Oye! Tu eres...</div>
         </div>
         <div class="section-two">
           <ion-grid>
@@ -26,7 +26,7 @@
                     <ion-icon name="man" style="zoom:4.0;" [color]="gender == 'male' ? 'color3' : 'light'"></ion-icon>
                   </ion-col>
                   <ion-col col-12>
-                    <button ion-button [color]="gender == 'male' ? 'color3' : 'light'">Male</button>
+                    <button ion-button [color]="gender == 'male' ? 'color3' : 'light'">Hombre</button>
                   </ion-col>
                 </ion-row>
               </ion-col>
@@ -36,7 +36,7 @@
                     <ion-icon name="woman" style="zoom:4.0;" [color]="gender == 'female' ? 'color3' : 'light'"></ion-icon>
                   </ion-col>
                   <ion-col col-12>
-                    <button ion-button [color]="gender == 'female' ? 'color3' : 'light'">Female</button>
+                    <button ion-button [color]="gender == 'female' ? 'color3' : 'light'">Mujer</button>
                   </ion-col>
                 </ion-row>
               </ion-col>
@@ -46,8 +46,8 @@
         <div class="section-three">
           <ion-list>
             <div class="button-option animated fadeInUp" padding-left padding-right>
-              <button ion-button round full color="color3" (click)="step2()">GO</button>
-              <button ion-button clear color="color7" (tap)="goToLandingPage()">Back</button>
+              <button ion-button round full color="color3" (click)="step2()">Ir</button>
+              <button ion-button clear color="color7" (tap)="goToLandingPage()">Atras</button>
             </div>
           </ion-list>
         </div>
@@ -62,7 +62,7 @@
       <div class="background" text-center>
 
         <div class="title animated fadeInDown">
-          <p>My Email is ...</p>
+          <p>Mi Email es...</p>
         </div>
 
         <!-- Main Body -->
@@ -75,7 +75,7 @@
                 <ion-label>
                   <ion-icon name="person" color="color3"></ion-icon>
                 </ion-label>
-                <ion-input type="text" placeholder="User Name" name="username"></ion-input>
+                <ion-input type="text" placeholder="Nombre de Usuario" name="username"></ion-input>
               </ion-item>
 
               <!-- Email -->
@@ -91,23 +91,23 @@
                 <ion-label padding-left>
                   <ion-icon name="md-calendar" color="color3"></ion-icon>
                 </ion-label>
-                <ion-datetime displayFormat="DDDD MMM, YYYY" placeholder="My Birthday"></ion-datetime>
+                <ion-datetime displayFormat="DDDD MMM, YYYY" placeholder="Mi Cumpleaños"></ion-datetime>
               </ion-item>
             </ion-list>
 
             <div class="buttons animated fadeInUp">
               <button ion-button type="button" color="color3" ion-button round full (click)="step3()">
-                Go
+                Ir
               </button>
             </div>
           </form>
 
           <!-- Sign In Page Button Option -->
           <button ion-button color="color7" clear (click)="goToSignInPage()">
-            <strong>Already have an account? Sign In</strong>
+            <strong>¿Ya tienes una cuenta? Inicia Sesión</strong>
           </button>
           <!-- Landing Page Button Option  -->
-          <button ion-button clear color="color7" (tap)="goToLandingPage()">Back</button>
+          <button ion-button clear color="color7" (tap)="goToLandingPage()">Atras</button>
         </div>
       </div>
     </ion-slide>
@@ -120,7 +120,7 @@
       <div class="background" text-center>
 
         <div class="title animated fadeInDown">
-          <p>My Password is...</p>
+          <p>Mi Contraseña es...</p>
         </div>
 
         <!-- Main Body -->
@@ -132,7 +132,7 @@
                 <ion-label>
                   <ion-icon name="md-eye" color="color3"></ion-icon>
                 </ion-label>
-                <ion-input type="password" placeholder="Password" name="password"></ion-input>
+                <ion-input type="password" placeholder="Contraseña" name="password"></ion-input>
               </ion-item>
 
               <!-- Confirm Password -->
@@ -140,7 +140,7 @@
                 <ion-label>
                   <ion-icon name="md-eye" color="color3"></ion-icon>
                 </ion-label>
-                <ion-input type="password" placeholder="Confirm Password" name="password"></ion-input>
+                <ion-input type="password" placeholder="Confirmar Contraseña" name="password"></ion-input>
               </ion-item>
 
             </ion-list>
@@ -149,16 +149,16 @@
             <!-- Sign Up Button -->
             <div class="buttons animated fadeInUp">
               <button ion-button type="button" color="color3" ion-button round full (click)="goToProfile()">
-                Sign Up
+                Registrarse
               </button>
             </div>
           </form>
 
           <!-- Sign In Button-->
           <button ion-button color="color7" clear (click)="goToSignInPage()">
-            <strong>Already have an account? Sign In</strong>
+            <strong>¿Ya tienes una cuenta? Inicia Sesión</strong>
           </button>
-          <button ion-button clear color="color7" (tap)="goToLandingPage()">Back</button>
+          <button ion-button clear color="color7" (tap)="goToLandingPage()">Atras</button>
         </div>
       </div>
     </ion-slide>
